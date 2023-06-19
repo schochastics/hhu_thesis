@@ -1,0 +1,72 @@
+---
+title: Meine tolle Bachelorarbeit
+format:
+  hhu_thesis-pdf: default
+author: David Schoch
+birthplace: Villingen-Schwenningen
+submission:
+  twosided: false #change to true for printing
+  day: "01"
+  month: July
+  year: 2023
+  chair: Albert Einstein
+  supervisor: Alan Turing
+  department: Lehrstuhl für Quantumphysik
+  university: Heinrich Heine Universität Düsseldorf
+
+thesis:
+  type: Bachelorarbeit
+  de: true
+abstract: |
+  Hier beschreibe ich nun auf einer Seite, welches Problem ich betrachtet, wie ich es gelöst habe und was die Hauptergebnisse meiner Arbeit sind. Laut Prüfungsordnung muss es eine Zusammenfassung geben, die nicht länger als eine Seite ist.
+acknowledgements: |
+  Viele Personen haben mich während meiner Arbeit an dieser Thesis unterstützt und ich möchte ihnen danken.
+  Bei Abschlussarbeiten ist in der Regel keine Danksagung erforderlich. Wenn man keine Danksagung haben möchte, kann man `acknowledgements` aus der YAML löschen.
+
+---
+
+\chapter{Einleitung}
+
+Ein paar einleitende Worte.\todo{Ein Todo}
+
+# Motivation
+
+Das hier ist die Einleitung.
+Hier sollte darauf eingegangen werden, was die Motivation der Arbeit ist.
+
+# Aufbau der Arbeit
+
+Gehe kurz darauf an, was den Leser in den nächsten Abschnitten erwartet.
+Die Gliederung kann vorab mit der betreuenden Person abgesprochen werden.
+
+\chapter{Hinweise zu LaTex}
+
+In dem Kapitel geben wir ein paar kleine Hilfestellungen zu häufigen \LaTeX-Fragen.
+
+# Abbildungen, Tabellen und Verweise
+
+\begin{figure}
+    \centering
+    \includegraphics[height=5cm]{hhu_logo_safe}
+    \caption{Sprechende Beschreibung der Abbildung}
+    \label{fig:logo}
+\end{figure}
+
+\begin{table}
+    \centering
+    \begin{tabular}{lcc}
+        \toprule
+        Modul   & CP & Semester\\
+        \midrule
+        Progra  & 10 & 1\\
+        Ana I   & 10 & 1\\
+        LA I    & 10 & 1\\
+        \midrule
+        Propgra & 10 & 2\\
+        RA      &  9 & 2\\
+        Ana II  & 10 & 2\\
+        \bottomrule
+    \end{tabular}
+    \caption[Beschreibung der Tabelle]{Beschreibung der Tabelle. Diese Tabelle hat eine recht lange Beschreibung, für das Tabellenverzeichnis wird zusätzlich eine Kurzvariante angegeben.}
+    \label{tab:module}
+\end{table}

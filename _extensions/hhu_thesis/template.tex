@@ -1,0 +1,150 @@
+$doc-class.tex()$
+
+$if(thesis.de)$
+\usepackage[english, ngerman]{babel}
+$else$
+\usepackage[ngerman, english]{babel}
+$endif$
+
+\PassOptionsToPackage{hyphens}{url}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[babel]{csquotes}
+\usepackage[style=alphabetic, backend=bibtex]{biblatex}
+\usepackage{mathptmx}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{courier}
+\usepackage[calc]{datetime2}
+\usepackage{amsmath}
+\makeatletter
+\def\displaymath{\typeout{*** Do not use DISPLAYMATH. Use \[...\] instead ***}}
+\def\eqnarray{\typeout{*** Do not use EQNARRAY(*). Use align(*)-environment instead ***}}
+\makeatother
+\usepackage{amsfonts}
+\usepackage{amstext}
+% \usepackage{subfigure}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{ifpdf}
+\usepackage{iflang}
+\usepackage{makeidx}
+\usepackage{nomencl}
+\usepackage{setspace}
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{todonotes}
+\usepackage{listings}
+\usepackage[%
+    binary-units=true,
+    per-mode=symbol,
+    exponent-product=\cdot,
+    range-units=single,
+    exponent-to-prefix=true,
+    zero-decimal-to-integer=true,
+    list-units=single
+    ]{siunitx}
+
+\usepackage[plainpages=false,pdfpagelabels]{hyperref}
+\usepackage[german]{cleveref}
+
+\def\mauve{0}
+\def\graffi{1}
+
+\addbibresource{$bibliography$}
+
+\ifpdf
+    \definecolor{brown}{cmyk}{0, 0.81, 1, 0.60}
+    \hypersetup{%
+      pdftitle={\thesistitle{}},
+      pdfsubject={\thesistype{}},
+      pdfauthor={\thesisauthor{}},
+      pdfkeywords={\thesiskeywords{}},
+      colorlinks=false, urlcolor=blue, citecolor=brown,
+      bookmarksnumbered=true,
+    }
+\else   
+\fi
+
+\DefineBibliographyStrings{ngerman}{%
+    mathesis = {Masterarbeit},
+    bathesis = {Bachelorarbeit},
+    phdthesis = {Dissertation}
+}
+
+\DefineBibliographyStrings{english}{%
+    mathesis = {Master's Thesis},
+    bathesis = {Bachelor's Thesis},
+    phdthesis = {PhD Thesis}
+}
+
+\listfiles
+\makeindex
+
+\begin{document}
+$before-body.tex()$
+$for(include-before)$
+$include-before$
+$endfor$
+
+\frontmatter
+$title.tex()$
+
+\cleardoublepage
+
+\begin{center} 
+    \huge 
+    $if(thesis.de)$
+    Zusammenfassung
+    $else$
+    Abstract
+    $endif$
+\end{center}
+$abstract$
+
+\cleardoublepage
+\begin{center} 
+    \huge 
+    $if(thesis.de)$
+    Danksagung
+    $else$
+    Acknowledgements
+    $endif$
+\end{center}
+$acknowledgements$
+
+\cleardoublepage
+
+\tableofcontents
+
+\listoffigures % entfernen, wenn leer
+
+\listoftables % entfernen, wenn leer
+
+%\listoflistings % TODO:add winth package minted?
+
+\mainmatter
+
+$body$
+
+\backmatter
+
+\printbibliography
+
+\cleardoublepage
+
+\printindex
+
+\chapter*{Ehrenwörtliche Erklärung}
+
+Hiermit versichere ich, die vorliegende $thesis.type$ selbstständig verfasst und keine anderen als die angegebenen Quellen und Hilfsmittel benutzt zu haben.
+Alle Stellen, die aus den Quellen entnommen wurden, sind als solche kenntlich gemacht worden.
+Diese Arbeit hat in gleicher oder ähnlicher Form noch keiner Prüfungsbehörde vorgelegen.
+
+\vspace{3cm}
+
+\noindent Düsseldorf, $submission.day$. $submission.month$ $submission.year$ \hfill $author$
+
+
+\cleardoublepage
+\end{document}

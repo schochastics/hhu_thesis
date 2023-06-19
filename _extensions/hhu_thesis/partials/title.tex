@@ -1,0 +1,49 @@
+\pdfbookmark[0]{\IfLanguageName{ngerman}{Titelseite}{Front Page}}{frontpage}
+\begin{titlepage}
+  \centering
+  \includegraphics[width=10cm]{hhu_logo_safe.pdf}\\
+
+  \vfill
+  \huge
+  $title$\\*[40pt]
+  \normalsize
+
+  \vfill
+  \large
+  $thesis.type$\\[0.25em]
+  \normalsize
+  $if(thesis.de)$
+    von\\
+  $else$
+    by\\
+  $endif$
+  \Large
+  $author$\\
+
+  \vspace{5mm}
+  \normalsize
+
+  $if(thesis.de)$
+    aus\\
+  $else$
+    born in\\
+  $endif$
+
+  $birthplace$\\[1cm]
+  $if(thesis.de)$
+    vorgelegt bei\\[5mm]
+  $else$
+    submitted to\\[5mm]
+  $endif$
+  $submission.department$\\
+  $submission.chair$\\
+     
+  $submission.university$\\[0.5cm]
+  $submission.month$ $submission.year$\\[0.5cm]
+  $if(thesis.de)$
+    Betreuer:\\
+  $else$
+    Supervisor:\\
+  $endif$
+  $submission.supervisor$
+\end{titlepage}

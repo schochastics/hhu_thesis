@@ -7,7 +7,6 @@ contributes:
     pdf:
       template: template.tex
       toc: true
-      include-in-header: header.tex
       template-partials:
         - partials/doc-class.tex
         - partials/before-body.tex

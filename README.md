@@ -1,4 +1,6 @@
-# Hhu_thesis Format
+# Quarto template for Thesises at HHU
+
+adapted from <https://wiki.cs.hhu.de/cn:abschlussarbeiten>
 
 ## Installing
 

@@ -92,8 +92,8 @@ $title.tex()$
 
 \cleardoublepage
 
-\begin{center} 
-    \huge 
+\begin{center}
+    \huge
     $if(thesis.de)$
     Zusammenfassung
     $else$
@@ -103,8 +103,8 @@ $title.tex()$
 $abstract$
 
 \cleardoublepage
-\begin{center} 
-    \huge 
+\begin{center}
+    \huge
     $if(thesis.de)$
     Danksagung
     $else$
@@ -115,13 +115,17 @@ $acknowledgements$
 
 \cleardoublepage
 
+$if(thesis.toc)$
 \tableofcontents
+$endif$
 
-\listoffigures % entfernen, wenn leer
+$if(thesis.lof)$
+\listoffigures
+$endif$
 
-\listoftables % entfernen, wenn leer
-
-%\listoflistings % TODO:add winth package minted?
+$if(thesis.lot)$
+\listoftables
+$endif$
 
 \mainmatter
 
@@ -137,9 +141,7 @@ $body$
 
 \chapter*{Ehrenwörtliche Erklärung}
 
-Hiermit versichere ich, die vorliegende $thesis.type$ selbstständig verfasst und keine anderen als die angegebenen Quellen und Hilfsmittel benutzt zu haben.
-Alle Stellen, die aus den Quellen entnommen wurden, sind als solche kenntlich gemacht worden.
-Diese Arbeit hat in gleicher oder ähnlicher Form noch keiner Prüfungsbehörde vorgelegen.
+$pledge$
 
 \vspace{3cm}
 

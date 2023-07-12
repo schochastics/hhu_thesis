@@ -17,11 +17,18 @@ submission:
 thesis:
   type: Bachelorarbeit
   de: true
+  toc: true #table of content
+  lof: false #list of figures
+  lot: false #list of tables
 abstract: |
   Hier beschreibe ich nun auf einer Seite, welches Problem ich betrachtet, wie ich es gelöst habe und was die Hauptergebnisse meiner Arbeit sind. Laut Prüfungsordnung muss es eine Zusammenfassung geben, die nicht länger als eine Seite ist.
 acknowledgements: |
   Viele Personen haben mich während meiner Arbeit an dieser Thesis unterstützt und ich möchte ihnen danken.
   Bei Abschlussarbeiten ist in der Regel keine Danksagung erforderlich. Wenn man keine Danksagung haben möchte, kann man `acknowledgements` aus der YAML löschen.
+pledge: |
+  Hiermit versichere ich, die vorliegende Bachelorarbeit selbstständig verfasst und keine anderen als die angegebenen Quellen und Hilfsmittel benutzt zu haben.
+  Alle Stellen, die aus den Quellen entnommen wurden, sind als solche kenntlich gemacht worden.
+  Diese Arbeit hat in gleicher oder ähnlicher Form noch keiner Prüfungsbehörde vorgelegen.
 
 ---
 
